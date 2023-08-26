@@ -1,38 +1,112 @@
-.App {
+/** IMPORTS **/
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Josefin+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap');
+
+/*** GLOBAL STYLES ***/
+:root {
+  --white : #ffffff;
+  --offwhite : #D8D8D8;
+  --yellow : #CCA564;
+  --green : #009688;
+  --black : #000000;
+  --gray : #303030;
+  --font-header : 'Cardo', serif;
+  --font-text : 'Josefin Sans', sans-serif;
+
+}
+html {
+  scroll-behavior: smooth;
+}
+* {
+  color: var(--black);
+  font-family: var(--font-text);
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-header);
+  font-size: 22px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1{
+  font-size: 40px;
+}
+h2{
+  font-size: 35px;
+}
+p{
+  font-size: 18px;
+}
+p.sub {
+  font-size: 20px;
+  text-align: center;
+}
+a {
+  color: var(--black);
+  text-decoration: none!important;
+}
+a:hover {
+  color: var(--green)!important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/*** LAYOUT ***/
+.container.full-width {
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
 }
-
-.App-header {
-  background-color: #282c34;
+.section {
+  position: relative;
+  padding: 50px 0;
+  background-color: var(--offwhite);
+}
+.text-center {
+  text-align: center;
+}
+/*** END GLOBAL STYLES ***/
+/*** HERO SECTION ***/
+.section.hero{
+  background: linear-gradient(180deg, rgba(250,250,250, 0) 0%, rgba(216,216,216, .5) 70%, var(--offwhite) 100%), url('./assets/images/IMG_5540.jpg') center bottom/cover no-repeat;
   min-height: 100vh;
+}
+.section.hero .content{
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.section.hero .content a{
+  font-size: 50px;
+  color: var(--gray);
+}
+/*** END HERO SECTION ***/
+/*** CONTACT SECTION ***/
+.section.contact .socials{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 30px;
 }
-
-.App-link {
-  color: #61dafb;
+.section.contact .socials .social-item {
+  margin: 20px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.section.contact .socials .social-item a.icon svg{
+  font-size: 40px;
+  background: var(--yellow);
+  padding: 20px;
+  border-radius: 50%;
+  color: var(--gray);
+  min-width: 40px;
+  transition: .3s;
 }
+.section.contact .socials .social-item a.icon:hover svg{
+  background: var(--green);
+}
+.section.contact .socials .social-item a.icon svg path{
+  color: var(--gray);
+  transition: .3s;
+}
+.section.contact .socials .social-item a.icon:hover svg path{
+  color: var(--white);
+}
+/*** END CONTACT SECTION ***/
+/*** COPYRIGHT SECTION ***/
+.section.copyright {
+  padding: 0 0 20px 0;
+}
+/*** END COPYRIGHT SECTION ***/

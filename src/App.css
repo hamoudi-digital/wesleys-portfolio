@@ -93,12 +93,13 @@ a:hover {
 /*** END GLOBAL STYLES ***/
 /*** NAV SECTIOON ***/
 .section.navigation {
-  background-color: rgba(216,216,216, 0);
+  background: rgba(255,255,255, 0);
   position: absolute;
   top: 0;
   left: 0;
   z-index: 999999;
   width: 100%;
+  overflow: visible;
 }
 .section.navigation p.logo{
   font-family: var(--font-header);
@@ -164,7 +165,7 @@ a:hover {
 .section.navigation .mobile-menu ul {
   position: absolute;
   left: 0;
-  top: 173.5px;
+  top: 168.5px;
   background: rgba(0,0,0,.7);
   width: 100%;
   height: 100%;
@@ -201,7 +202,16 @@ a:hover {
   left: 0;
   transition-duration: .3s;
 }
+@media(max-width: 1200px) {
+  .section.navigation {
+    background: rgba(255,255,255, 0.3);
+  }
+}
 @media (max-width: 767px) {
+  .section.navigation {
+    background: rgba(255,255,255, 0.7);
+    position: relative;
+  }
   .section.navigation p.logo{
     font-size: 35px;
     margin-top: -5px;
@@ -219,7 +229,7 @@ a:hover {
 /*** END NAV SECTION ***?
 /*** HERO SECTION ***/
 .section.hero{
-  background: linear-gradient(180deg, rgba(250,250,250, 0) 0%, rgba(216,216,216, .5) 70%, var(--offwhite) 100%), url('./assets/images/IMG_5540.jpg') center bottom/cover no-repeat;
+  background: linear-gradient(180deg, rgba(250,250,250, 0) 0%, rgba(216,216,216, .5) 70%, var(--offwhite) 100%), url('./assets/images/wes-lewis-couch.webp') center top/cover no-repeat;
   min-height: 100vh;
 }
 .section.hero .content{

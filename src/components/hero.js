@@ -4,7 +4,7 @@ import React from 'react';
 function Hero(){
 
     return(
-        <div className='section hero'>
+        <div className='section hero' id='hero'>
             <div className='container'>
                 <div className='row'>
                     <div className='col-12'>

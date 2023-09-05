@@ -1,6 +1,5 @@
 // src/components/Navigation.js
 import React from 'react';
-// import logo from '../assets/logo.png'
 import { useEffect } from 'react';
 
 
@@ -10,8 +9,10 @@ function Navigation() {
     const menuToggle = () => {
         activeMenu = !activeMenu;
         let navigation = document.getElementById('navigation');
-        let mainMenu = document.getElementById('main-menu');
+        let mainMenu = document.getElementById('mobile-menu');
         if (activeMenu) {
+            let docHeight = Math.max(document.body.getBoundingClientRect().height, document.documentElement.getBoundingClientRect().height);
+            document.querySelector(':root').style.setProperty('--doc-height', docHeight - 173.5 + 'px');
             navigation.classList.add('active');
             mainMenu.classList.add('active');
         }
@@ -25,46 +26,59 @@ function Navigation() {
         navToggle.click();
     }
     return (
-        <div className="navigation" id='navigation'>
+        <div className="section navigation" id='navigation'>
             <div className="container main-nav">
                 <div className="row">
-                    <div className="col-4 d-flex justify-content-center flex-column">
+                    <div className="col-md-6 col-8">
                         <div className="name-wrap">
-                            <a href="/" style={{color: '#000000'}}>
-                                Test
+                            <a href="#" style={{color: '#000000'}}>
+                                <p className='logo'>Wesley Lewis</p>
+                                <p className='sub'>Saxophonist / Composer / Arranger</p>
                             </a>
                         </div>
                     </div>
-                    <div className="col-4 d-flex justify-content-center flex-column">
-                        <div className="logo-container text-center">
-                            <a href='/'>
-                                {/* <img src={logo} className="logo"/> */}
-                            </a>
+                    <div className="col-md-6 col-4">
+                        <div className="main-menu" id='main-menu'>
+                            <ul>
+                                <li>
+                                    <a href='#about'>About</a>
+                                </li>
+                                 <li>
+                                    <a href='#media'>Media</a>
+                                </li>
+                                <li>
+                                    <a href='#gallery'>Gallary</a>
+                                </li>
+                                <li>
+                                    <a href='#contact'>Contact</a>
+                                </li>
+                            </ul>
                         </div>
-                    </div>
-                    <div className="col-4 d-flex justify-content-center flex-column">
-                        <div className='toggle-container text-right'>
-                            <div id='nav-toggle' className='nav-toggle' onClick={menuToggle} >
-                                <div className="bar top"></div>
-                                <div className="bar middle"></div>
-                                <div className="bar bottom"></div>
+                        <div className="mobile-menu" id='mobile-menu'>
+                            <div className='toggle-container text-right'>
+                                <div id='nav-toggle' className='nav-toggle' onClick={menuToggle} >
+                                    <div className="bar top"></div>
+                                    <div className="bar middle"></div>
+                                    <div className="bar bottom"></div>
+                                </div>
                             </div>
+                            <ul>
+                                <li>
+                                    <a href='#about' onClick={menuClick}>About</a>
+                                </li>
+                                 <li>
+                                    <a href='#media' onClick={menuClick}>Media</a>
+                                </li>
+                                <li>
+                                    <a href='#gallery' onClick={menuClick}>Gallary</a>
+                                </li>
+                                <li>
+                                    <a href='#contact' onClick={menuClick}>Contact</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className="main-menu" id='main-menu'>
-                <ul>
-                    <li>
-                        <a href='#about' onClick={menuClick}>About</a>
-                    </li>
-                    <li>
-                        <a href='/' onClick={menuClick}>Portfolio</a>
-                    </li>
-                    <li>
-                        <a href='#contact' onClick={menuClick}>Contact</a>
-                    </li>
-                </ul>
             </div>
         </div>
     );

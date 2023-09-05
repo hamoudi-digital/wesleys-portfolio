@@ -7,7 +7,7 @@ import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 function Contact(){
 
     return(
-        <div className='section contact'>
+        <div className='section contact' id='contact'>
             <div className='container'>
                 <div className='row'>
                     <div className='col-12'>

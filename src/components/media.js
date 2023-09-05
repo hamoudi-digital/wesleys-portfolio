@@ -4,7 +4,6 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';  
 
 function Media() {
-    // const gallery1 = require('../assets/images/_DSF0239.jpg');
 
     return(
         <div className='section media' id='media'>
@@ -18,15 +17,16 @@ function Media() {
                                 items={1}
                                 className="owl-theme media"  
                                 margin={8}
-                                draggable={false}
                                 responsive={
                                     {
                                         0:{
                                             nav:false,
-                                            dots:true
+                                            dots:true,
+                                            draggable:true,
                                         },
                                         767:{
-                                            nav:true
+                                            nav:true,
+                                            draggable:false,
                                         },
                                     }
                                 } >  
@@ -34,7 +34,7 @@ function Media() {
                                     <div className="row">
                                         <div className="col-md-8">
                                             <div className="media-container">
-                                                <iframe width="560" height="315" src="https://www.youtube.com/embed/K5MUx7BwVls?si=tXXGSVpjSO5P1YZC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                                <iframe width="560" height="315" src="https://www.youtube.com/embed/K5MUx7BwVls?si=tXXGSVpjSO5P1YZC" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                                             </div>
                                         </div>
                                         <div className="col-md-4">
@@ -53,7 +53,7 @@ function Media() {
                                     <div className="row">
                                         <div className="col-md-8">
                                             <div className="media-container">
-                                                <iframe width="560" height="315" src="https://www.youtube.com/embed/K5MUx7BwVls?si=tXXGSVpjSO5P1YZC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                                <iframe width="560" height="315" src="https://www.youtube.com/embed/K5MUx7BwVls?si=tXXGSVpjSO5P1YZC" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                                             </div>
                                         </div>
                                         <div className="col-md-4">
@@ -72,7 +72,7 @@ function Media() {
                                     <div className="row">
                                         <div className="col-md-8">
                                             <div className="media-container">
-                                                <iframe width="560" height="315" src="https://www.youtube.com/embed/K5MUx7BwVls?si=tXXGSVpjSO5P1YZC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                                <iframe width="560" height="315" src="https://www.youtube.com/embed/K5MUx7BwVls?si=tXXGSVpjSO5P1YZC" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                                             </div>
                                         </div>
                                         <div className="col-md-4">

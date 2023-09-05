@@ -55,6 +55,7 @@ a:hover {
   position: relative;
   padding: 50px 0;
   background-color: var(--offwhite);
+  overflow-x: hidden;
 }
 .text-center {
   text-align: center;
@@ -62,19 +63,20 @@ a:hover {
 
 /*** CAROUSEL ***/
 
-.section.media .owl-carousel .owl-nav {
+.owl-theme.owl-carousel .owl-nav {
   position: absolute;
   top: calc(50% - 33px);
-  width: 100%;
+  width: 110%;
   transform: translateY(-50%);
   display: flex;
   justify-content: space-between;
   padding-left: 10px;
   padding-right: 10px;
+  margin-left: -5%;
 }
 .owl-theme.owl-carousel .owl-nav button span{
   font-size: 50px;
-  color: var(--offwhite);
+  color: var(--gray);
 }
 .owl-theme.owl-carousel .owl-nav button:hover{
   background: rgba(0,0,0,0);
@@ -247,6 +249,17 @@ a:hover {
 }
 .section.media .owl-carousel .media-item .media-description *{
   text-align: left;
+}
+@media (max-width:767px) {
+  .section.media .owl-carousel .media-item .media-container iframe{
+    margin: 0;
+  }
+  .section.media .owl-carousel .media-item .media-description {
+    margin-top: 30px;
+  }
+  .section.media .owl-carousel .media-item .media-description {
+    margin-top: 30px;
+  }
 }
 /*** END MEDIA SECTION ***/
 /*** GALLERY SECTION ***/

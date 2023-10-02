@@ -47,7 +47,7 @@ function Navigation() {
                                     <a href='#media'>Media</a>
                                 </li>
                                 <li>
-                                    <a href='#gallery'>Gallary</a>
+                                    <a href='#gallery'>Gallery</a>
                                 </li>
                                 <li>
                                     <a href='#contact'>Contact</a>
@@ -70,7 +70,7 @@ function Navigation() {
                                     <a href='#media' onClick={menuClick}>Media</a>
                                 </li>
                                 <li>
-                                    <a href='#gallery' onClick={menuClick}>Gallary</a>
+                                    <a href='#gallery' onClick={menuClick}>Gallery</a>
                                 </li>
                                 <li>
                                     <a href='#contact' onClick={menuClick}>Contact</a>

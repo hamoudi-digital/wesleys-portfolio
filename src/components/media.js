@@ -34,17 +34,16 @@ function Media() {
                                     <div className="row">
                                         <div className="col-md-8">
                                             <div className="media-container">
-                                                <iframe width="560" height="315" src="https://www.youtube.com/embed/K5MUx7BwVls?si=tXXGSVpjSO5P1YZC" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                                                <iframe width="560" height="315" src="https://www.youtube.com/embed/BxGIv_rh-zk?si=lhnq5CCjnDFgs0Yv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                                            </div>
                                             </div>
-                                        </div>
                                         <div className="col-md-4">
                                             <div className="media-description">
-                                                <h3>the Jimmy Gavagan Trio at RD86 Studio Dinner & Jazz</h3>
-                                                <p>Lineup: lorem ipsom</p>
-                                                <p>Venue: lorem ipsom</p>
-                                                <p>Date: lorem ipsom</p>
-                                                <p>Description:</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis bibendum metus, sit amet tristique dolor. Ut in justo ligula. Aenean et orci ut lorem sagittis ornare vitae eget nibh. Fusce pellentesque velit in massa cursus pretium. Donec viverra imperdiet scelerisque. Curabitur massa lectus, lacinia a dui et, euismod vehicula quam. Proin vel tellus augue. Suspendisse potenti. Vivamus et elit posuere, imperdiet quam nec, molestie felis. Nam rutrum tortor in dapibus gravida. Mauris vel tempus ex, sodales suscipit eros. Aliquam massa lacus, mollis vel nulla et, sodales hendrerit leo. Integer id blandit justo. Nulla in ipsum eu ligula maximus fringilla.</p>
+                                                <h3>Wes Lewis Quartet — Darn That Dream (Live at RD86 Space)</h3>
+                                                <p>Personnel:</p>
+                                                <p>Wes Lewis - Tenor Sax</p>
+                                                <p>Derek Lewis - Piano</p>
+                                                <p>Christie Echols - Bass</p>
+                                                <p>Tyler Goldchain - Drums</p>
                                             </div>
                                         </div>
                                     </div>
@@ -53,17 +52,17 @@ function Media() {
                                     <div className="row">
                                         <div className="col-md-8">
                                             <div className="media-container">
-                                                <iframe width="560" height="315" src="https://www.youtube.com/embed/K5MUx7BwVls?si=tXXGSVpjSO5P1YZC" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                                                <iframe width="560" height="315" src="https://www.youtube.com/embed/K5MUx7BwVls?si=xlj3sDd6wpyD9hAR&amp;start=5195" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                                             </div>
                                         </div>
                                         <div className="col-md-4">
                                             <div className="media-description">
-                                                <h3>the Jimmy Gavagan Trio at RD86 Studio Dinner & Jazz</h3>
-                                                <p>Lineup: lorem ipsom</p>
-                                                <p>Venue: lorem ipsom</p>
-                                                <p>Date: lorem ipsom</p>
-                                                <p>Description:</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis bibendum metus, sit amet tristique dolor. Ut in justo ligula. Aenean et orci ut lorem sagittis ornare vitae eget nibh. Fusce pellentesque velit in massa cursus pretium. Donec viverra imperdiet scelerisque. Curabitur massa lectus, lacinia a dui et, euismod vehicula quam. Proin vel tellus augue. Suspendisse potenti. Vivamus et elit posuere, imperdiet quam nec, molestie felis. Nam rutrum tortor in dapibus gravida. Mauris vel tempus ex, sodales suscipit eros. Aliquam massa lacus, mollis vel nulla et, sodales hendrerit leo. Integer id blandit justo. Nulla in ipsum eu ligula maximus fringilla.</p>
+                                                <h3>Jimmy Gavagan Trio ft. Wes Lewis — Beatrice (Live at RD86 Space)</h3>
+                                                <p>Personnel:</p>
+                                                <p>Wes Lewis - Tenor Sax</p>
+                                                <p>Jimmy Gavagan - Drums</p>
+                                                <p>Christie Echols - Bass</p>
+                                                <p>Andrew Wilcox - Piano</p>
                                             </div>
                                         </div>
                                     </div>
@@ -72,22 +71,59 @@ function Media() {
                                     <div className="row">
                                         <div className="col-md-8">
                                             <div className="media-container">
-                                                <iframe width="560" height="315" src="https://www.youtube.com/embed/K5MUx7BwVls?si=tXXGSVpjSO5P1YZC" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                                                <iframe width="560" height="315" src="https://www.youtube.com/embed/i6poOFqgP6c?si=3wt3pfZT-LlItL1i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                                             </div>
                                         </div>
                                         <div className="col-md-4">
                                             <div className="media-description">
-                                                <h3>the Jimmy Gavagan Trio at RD86 Studio Dinner & Jazz</h3>
-                                                <p>Lineup: lorem ipsom</p>
-                                                <p>Venue: lorem ipsom</p>
-                                                <p>Date: lorem ipsom</p>
-                                                <p>Description:</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In quis bibendum metus, sit amet tristique dolor. Ut in justo ligula. Aenean et orci ut lorem sagittis ornare vitae eget nibh. Fusce pellentesque velit in massa cursus pretium. Donec viverra imperdiet scelerisque. Curabitur massa lectus, lacinia a dui et, euismod vehicula quam. Proin vel tellus augue. Suspendisse potenti. Vivamus et elit posuere, imperdiet quam nec, molestie felis. Nam rutrum tortor in dapibus gravida. Mauris vel tempus ex, sodales suscipit eros. Aliquam massa lacus, mollis vel nulla et, sodales hendrerit leo. Integer id blandit justo. Nulla in ipsum eu ligula maximus fringilla.</p>
+                                                <h3>The Yale Jazz Ensemble (ft. Wes Lewis) — Moment’s Notice (Live at Sprague Memorial Hall)</h3>
+                                                <p>Personnel:</p>
+                                                <p>Wayne Escoffery - Conductor</p>
+                                                <p>Jarron Long - Drums</p>
+                                                <p>Thara Joseph - Bass</p>
+                                                <p>Aidan Kluger - Piano</p>
+                                                <p>Wes Lewis - Alto Sax (soloist)</p>
+                                                <p>Max Saffer-Meng - Trombone (soloist)</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div> 
-
+                                <div className="media-item">
+                                    <div className="row">
+                                        <div className="col-md-8">
+                                            <div className="media-container">
+                                                <iframe width="560" height="315" src="https://www.youtube.com/embed/R6Wiqx7KODk?si=PVF3QSWfOPoJ3CSz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                            </div>
+                                        </div>
+                                        <div className="col-md-4">
+                                            <div className="media-description">
+                                                <h3>Wes Lewis Quartet — St. Thomas (Live at RD86 Space)</h3>
+                                                <p>Personnel:</p>
+                                                <p>Wes Lewis - Tenor Sax</p>
+                                                <p>Derek Lewis - Piano</p>
+                                                <p>Christie Echols - Bass</p>
+                                                <p>Tyler Goldchain - Drums</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> 
+                                <div className="media-item">
+                                    <div className="row">
+                                        <div className="col-md-8">
+                                            <div className="media-container">
+                                                <iframe width="560" height="315" src="https://www.youtube.com/embed/7pne35aHzuI?si=Ewy2LNxSt9Tanoxe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                            </div>
+                                        </div>
+                                        <div className="col-md-4">
+                                            <div className="media-description">
+                                                <h3>Wes Lewis & Raj Basak — Silent Night</h3>
+                                                <p>Personnel:</p>
+                                                <p>Wes Lewis - Tenor Sax</p>
+                                                <p>Raj Basak - Keyboard and Production</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> 
                             </OwlCarousel>  
                         </div>
                     </div>

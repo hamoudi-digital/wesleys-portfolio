@@ -273,6 +273,10 @@ a:hover {
 }
 /*** END MEDIA SECTION ***/
 /*** GALLERY SECTION ***/
+.section.gallery .owl-carousel .owl-stage {
+  display: flex;
+  align-items: center;
+}
 .section.gallery .owl-carousel .gallery-item {
   padding: 11px;
 }

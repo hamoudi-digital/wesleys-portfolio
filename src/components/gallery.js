@@ -56,79 +56,82 @@ function Gallery() {
                                     }
                                 } >  
                                 <div className="gallery-item">
-                                    <img className="img" src={gallery1}/>
+                                    <img className="img" src={gallery1} alt=""/>
                                 </div> 
                                 <div className="gallery-item">
-                                    <img className="img" src={gallery2}/>
+                                    <img className="img" src={gallery2} alt=""/>
                                 </div>
                                 <div className="gallery-item">
-                                    <img className="img" src={gallery3}/>
+                                    <img className="img" src={gallery3} alt=""/>
                                 </div>
                                 <div className="gallery-item">
-                                    <img className="img" src={gallery4}/>
+                                    <img className="img" src={gallery4} alt=""/>
                                 </div>
                                 <div className="gallery-item">
-                                    <img className="img" src={gallery5}/>
+                                    <img className="img" src={gallery5} alt=""/>
                                 </div>
                                 <div className="gallery-item">
-                                    <img className="img" src={gallery6}/>
+                                    <img className="img" src={gallery6} alt=""/>
                                 </div>
                                 <div className="gallery-item">
-                                    <img className="img" src={gallery7}/>
+                                    <img className="img" src={gallery7} alt=""/>
                                 </div>
                                 <div className="gallery-item">
-                                    <img className="img" src={gallery8}/>
+                                    <img className="img" src={gallery8} alt=""/>
                                 </div>
                                 <div className="gallery-item">
-                                    <img className="img" src={gallery9}/>
+                                    <img className="img" src={gallery9} alt=""/>
                                 </div>
                                 <div className="gallery-item">
-                                    <img className="img" src={gallery10}/>
+                                    <img className="img" src={gallery10} alt=""/>
                                 </div>
                                 <div className="gallery-item">
-                                    <img className="img" src={gallery11}/>
+                                    <img className="img" src={gallery11} alt=""/>
                                 </div>
                                 <div className="gallery-item">
-                                    <img className="img" src={gallery12}/>
+                                    <img className="img" src={gallery12} alt=""/>
                                 </div>
                                 <div className="gallery-item">
-                                    <img className="img" src={gallery13}/>
+                                    <img className="img" src={gallery13} alt=""/>
                                 </div>
                                 <div className="gallery-item">
-                                    <img className="img" src={gallery14}/>
+                                    <img className="img" src={gallery14} alt=""/>
                                 </div>
                                 <div className="gallery-item">
-                                    <img className="img" src={gallery15}/>
+                                    <img className="img" src={gallery15} alt=""/>
                                 </div>
                                 <div className="gallery-item">
-                                    <img className="img" src={gallery16}/>
+                                    <img className="img" src={gallery16} alt=""/>
                                 </div>
                                 <div className="gallery-item">
-                                    <img className="img" src={gallery17}/>
+                                    <img className="img" src={gallery17} alt=""/>
                                 </div>
                                 <div className="gallery-item">
-                                    <img className="img" src={gallery18}/>
+                                    <img className="img" src={gallery18} alt=""/>
                                 </div>
                                 <div className="gallery-item">
-                                    <img className="img" src={gallery19}/>
+                                    <img className="img" src={gallery19} alt=""/>
                                 </div>
                                 <div className="gallery-item">
-                                    <img className="img" src={gallery20}/>
+                                    <img className="img" src={gallery20} alt=""/>
                                 </div>
                                 <div className="gallery-item">
-                                    <img className="img" src={gallery21}/>
+                                    <img className="img" src={gallery21} alt=""/>
                                 </div>
                                 <div className="gallery-item">
-                                    <img className="img" src={gallery22}/>
+                                    <img className="img" src={gallery22} alt=""/>
                                 </div>
                                 <div className="gallery-item">
-                                    <img className="img" src={gallery23}/>
+                                    <img className="img" src={gallery23} alt=""/>
                                 </div>
                                 <div className="gallery-item">
-                                    <img className="img" src={gallery24}/>
+                                    <img className="img" src={gallery24} alt=""/>
                                 </div>
                                 <div className="gallery-item">
-                                    <img className="img" src={gallery25}/>
+                                    <img className="img" src={gallery25} alt=""/>
+                                </div>
+                                <div className="gallery-item">
+                                    <img className="img" src={gallery26} alt=""/>
                                 </div>
                             </OwlCarousel>  
                         </div>

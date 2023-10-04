@@ -17,6 +17,7 @@ function Media() {
                                 items={1}
                                 className="owl-theme media"  
                                 margin={8}
+                                draggable={0}
                                 responsive={
                                     {
                                         0:{

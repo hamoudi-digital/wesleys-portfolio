@@ -244,6 +244,9 @@ a:hover {
 }
 /*** END HERO SECTION ***/
 /*** MEDIA SECTION ***/
+.section.media .owl-carousel .media-item {
+  padding: 20px 0;
+}
 .section.media .owl-carousel .media-item .media-container{
   position: relative;
   padding-bottom: 56.25%;

@@ -4,10 +4,10 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';  
 
 function Gallery() {
-    const gallery1 = require('../assets/images/_DSF0239.jpg');
+    const gallery1 = require('../assets/images/_DSF0411.jpg');
     const gallery2 = require('../assets/images/_DSF0372.jpg');
     const gallery3 = require('../assets/images/_DSF0409.jpg');
-    const gallery4 = require('../assets/images/_DSF0411.jpg');
+    const gallery4 = require('../assets/images/_DSF0239.jpg');
     const gallery5 = require('../assets/images/_DSF0415.jpg');
     const gallery6 = require('../assets/images/_DSF0426.jpg');
     const gallery7 = require('../assets/images/_DSF0454.jpg');

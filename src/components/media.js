@@ -35,8 +35,9 @@ function Media() {
                                     <div className="row">
                                         <div className="col-md-8">
                                             <div className="media-container">
-                                                <iframe width="560" height="315" src="https://www.youtube.com/embed/BxGIv_rh-zk?si=lhnq5CCjnDFgs0Yv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                                            </div>
+                                                <iframe width="560" height="315" src="https://www.youtube.com/embed/BxGIv_rh-zk?si=lhnq5CCjnDFgs0Yv" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                                             </div>
+                                        </div>
                                         <div className="col-md-4">
                                             <div className="media-description">
                                                 <h3>Wes Lewis Quartet — Darn That Dream (Live at RD86 Space)</h3>
@@ -53,7 +54,7 @@ function Media() {
                                     <div className="row">
                                         <div className="col-md-8">
                                             <div className="media-container">
-                                                <iframe width="560" height="315" src="https://www.youtube.com/embed/K5MUx7BwVls?si=xlj3sDd6wpyD9hAR&amp;start=5195" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                                <iframe width="560" height="315" src="https://www.youtube.com/embed/K5MUx7BwVls?si=xlj3sDd6wpyD9hAR&amp;start=5195" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                                             </div>
                                         </div>
                                         <div className="col-md-4">
@@ -72,7 +73,7 @@ function Media() {
                                     <div className="row">
                                         <div className="col-md-8">
                                             <div className="media-container">
-                                                <iframe width="560" height="315" src="https://www.youtube.com/embed/i6poOFqgP6c?si=3wt3pfZT-LlItL1i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                                <iframe width="560" height="315" src="https://www.youtube.com/embed/i6poOFqgP6c?si=3wt3pfZT-LlItL1i" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                                             </div>
                                         </div>
                                         <div className="col-md-4">
@@ -93,7 +94,7 @@ function Media() {
                                     <div className="row">
                                         <div className="col-md-8">
                                             <div className="media-container">
-                                                <iframe width="560" height="315" src="https://www.youtube.com/embed/R6Wiqx7KODk?si=PVF3QSWfOPoJ3CSz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                                <iframe width="560" height="315" src="https://www.youtube.com/embed/R6Wiqx7KODk?si=PVF3QSWfOPoJ3CSz" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                                             </div>
                                         </div>
                                         <div className="col-md-4">
@@ -112,7 +113,7 @@ function Media() {
                                     <div className="row">
                                         <div className="col-md-8">
                                             <div className="media-container">
-                                                <iframe width="560" height="315" src="https://www.youtube.com/embed/7pne35aHzuI?si=Ewy2LNxSt9Tanoxe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                                <iframe width="560" height="315" src="https://www.youtube.com/embed/7pne35aHzuI?si=Ewy2LNxSt9Tanoxe" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                                             </div>
                                         </div>
                                         <div className="col-md-4">

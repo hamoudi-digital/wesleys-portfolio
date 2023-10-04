@@ -1,13 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import OwlCarousel from 'react-owl-carousel';  
 import 'owl.carousel/dist/assets/owl.carousel.css';  
 import 'owl.carousel/dist/assets/owl.theme.default.css';  
 
 function Gallery() {
-    const gallery1 = require('../assets/images/_DSF0411.jpg');
+    const gallery1 = require('../assets/images/_DSF0239.jpg');
     const gallery2 = require('../assets/images/_DSF0372.jpg');
     const gallery3 = require('../assets/images/_DSF0409.jpg');
-    const gallery4 = require('../assets/images/_DSF0239.jpg');
+    const gallery4 = require('../assets/images/_DSF0411.jpg');
     const gallery5 = require('../assets/images/_DSF0415.jpg');
     const gallery6 = require('../assets/images/_DSF0426.jpg');
     const gallery7 = require('../assets/images/_DSF0454.jpg');
@@ -31,6 +31,33 @@ function Gallery() {
     const gallery25 = require('../assets/images/IMG_5602.jpg');
     const gallery26 = require('../assets/images/jam-new-haven.jpg');
 
+    function setCarouselHeight() {
+        let owlStage = document.querySelector('.gallery .owl-stage')
+        let activeItems = document.querySelectorAll('.gallery .owl-item.active');
+        let height = 0;
+        activeItems.forEach(activeItem => {
+            if (activeItem.offsetHeight > height) {
+                height = activeItem.offsetHeight;
+            }
+        });
+        owlStage.style.height = height + 'px';
+        console.log(height);
+    }
+    useEffect(() => {
+        let navButtons = document.querySelectorAll('.gallery .owl-nav button');
+        let owlDots = document.querySelectorAll('.gallery .owl-dot');
+        navButtons.forEach(navButton => {
+            navButton.addEventListener('click', () => {
+                setCarouselHeight();
+            });
+        });
+        owlDots.forEach(owlDot => {
+            owlDot.addEventListener('click', () => {
+                setCarouselHeight();
+            });
+        });
+        setCarouselHeight();
+    });
     return(
         <div className='section gallery' id='gallery'>
             <div className='container'>

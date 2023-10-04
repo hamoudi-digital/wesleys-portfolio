@@ -247,6 +247,9 @@ a:hover {
 .section.media .owl-carousel .media-item {
   padding: 20px 0;
 }
+.section.media .owl-carousel .media-item .media-wrap{
+  margin-right: 30px;
+}
 .section.media .owl-carousel .media-item .media-container{
   position: relative;
   padding-bottom: 56.25%;
@@ -264,6 +267,9 @@ a:hover {
   text-align: left;
 }
 @media (max-width:767px) {
+  .section.media .owl-carousel .media-item .media-wrap{
+    margin: 0;
+  }
   .section.media .owl-carousel .media-item .media-container iframe{
     margin: 0;
   }

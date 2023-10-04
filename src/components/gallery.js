@@ -56,7 +56,9 @@ function Gallery() {
                 setCarouselHeight();
             });
         });
-        setCarouselHeight();
+        window.onload = () => {
+            setCarouselHeight();
+        };
     });
     return(
         <div className='section gallery' id='gallery'>

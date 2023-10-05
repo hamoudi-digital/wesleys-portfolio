@@ -4,10 +4,10 @@
 /*** GLOBAL STYLES ***/
 :root {
   --white : #ffffff;
-  --offwhite : #D8D8D8;
+  --offwhite : #fefefe;
   --yellow : #CCA564;
   --green : #009688;
-  --black : #000000;
+  --black : #2f2f2f;
   --gray : #303030;
   --font-header : 'Cardo', serif;
   --font-text : 'Josefin Sans', sans-serif;
@@ -209,7 +209,7 @@ a:hover {
   .section.navigation {
     position: relative;
     background: rgba(254,254,254, 1);
-    border-bottom: 1px solid #fefefe;
+    border-bottom: 1px solid var(--offwhite);
   }
 }
 @media (max-width: 767px) {

@@ -30,7 +30,7 @@ function Navigation() {
                 <div className="row">
                     <div className="col-md-6 col-8">
                         <div className="name-wrap">
-                            <a href="#" style={{color: '#000000'}}>
+                            <a href="#">
                                 <p className='logo'>Wesley Lewis</p>
                                 <p className='sub'>Saxophonist / Composer / Arranger</p>
                             </a>

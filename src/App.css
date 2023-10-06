@@ -192,7 +192,7 @@ a:hover {
 .section.navigation .mobile-menu ul li a{
   font-size: 30px;
   font-family: var(--font-header);
-  color: var(--offwhite);
+  color: var(--offwhite)!important;
   position: relative;
 } 
 .section.navigation .mobile-menu ul li a:after{
@@ -216,6 +216,7 @@ a:hover {
   .section.navigation p.logo{
     font-size: 35px;
     margin-top: -5px;
+    white-space: nowrap;
   }
   .section.navigation p.sub{
     font-size: 14px;

@@ -127,18 +127,6 @@ function Gallery() {
         owlStage.style.height = height + 'px';
     }
     useEffect(() => {
-        let navButtons = document.querySelectorAll('.gallery .owl-nav button');
-        let owlDots = document.querySelectorAll('.gallery .owl-dot');
-        navButtons.forEach(navButton => {
-            navButton.addEventListener('click', () => {
-                setCarouselHeight();
-            });
-        });
-        owlDots.forEach(owlDot => {
-            owlDot.addEventListener('click', () => {
-                setCarouselHeight();
-            });
-        });
         window.onload = () => {
             setCarouselHeight();
         };
@@ -154,6 +142,8 @@ function Gallery() {
                             <OwlCarousel items={3}  
                                 className="owl-theme gallery"  
                                 margin={8}
+                                onInitialized={setCarouselHeight}
+                                onTranslated={setCarouselHeight}
                                 responsive={
                                     {
                                         0:{

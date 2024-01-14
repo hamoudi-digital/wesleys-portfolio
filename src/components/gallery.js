@@ -126,11 +126,7 @@ function Gallery() {
         });
         owlStage.style.height = height + 'px';
     }
-    useEffect(() => {
-        window.onload = () => {
-            setCarouselHeight();
-        };
-    });
+
     return(
         <div className='section gallery' id='gallery'>
             <div className='container'>
@@ -142,7 +138,6 @@ function Gallery() {
                             <OwlCarousel items={3}  
                                 className="owl-theme gallery"  
                                 margin={8}
-                                onInitialized={setCarouselHeight}
                                 onTranslated={setCarouselHeight}
                                 responsive={
                                     {

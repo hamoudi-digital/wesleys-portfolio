@@ -36,6 +36,70 @@ function Media() {
                                         <div className="col-md-8">
                                             <div className="media-wrap">
                                                 <div className="media-container">
+                                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/WQCf7kc5eiM?si=iU-eiHlqasClRbCu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="col-md-4">
+                                            <div className="media-description">
+                                                <h3>Wes Lewis Quartet — Little Melonae (Live at Bop Shop Records)</h3>
+                                                <p>Personnel:</p>
+                                                <p>Wes Lewis - Tenor Sax</p>
+                                                <p>Derek Lewis - Piano</p>
+                                                <p>Sabu Adeyola - Bass</p>
+                                                <p>John Bacon - Drums</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> 
+                                <div className="media-item">
+                                    <div className="row">
+                                        <div className="col-md-8">
+                                            <div className="media-wrap">
+                                                <div className="media-container">
+                                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/p4MnDHL5HeI?si=1tZL8r4A6j3wy3Zd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="col-md-4">
+                                            <div className="media-description">
+                                                <h3>Wes Lewis Quartet — Jazz Homecoming Tour (Live at Pausa Art House)</h3>
+                                                <p>Personnel:</p>
+                                                <p>Wes Lewis - Tenor Sax</p>
+                                                <p>Dave Schiavone - Tenor Sax/Alto Sax/Flute</p>
+                                                <p>Derek Lewis - Piano</p>
+                                                <p>Sabu Adeyola - Bass</p>
+                                                <p>John Bacon - Drums</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> 
+                                <div className="media-item">
+                                    <div className="row">
+                                        <div className="col-md-8">
+                                            <div className="media-wrap">
+                                                <div className="media-container">
+                                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Gp98-kP6Gdo?si=PAR6SoBKTUb6D0rs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="col-md-4">
+                                            <div className="media-description">
+                                                <h3>Wes Lewis Quartet — Scrapple From The Apple (Live at Bop Shop Records)</h3>
+                                                <p>Personnel:</p>
+                                                <p>Wes Lewis - Tenor Sax</p>
+                                                <p>Derek Lewis - Piano</p>
+                                                <p>Sabu Adeyola - Bass</p>
+                                                <p>John Bacon - Drums</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> 
+                                <div className="media-item">
+                                    <div className="row">
+                                        <div className="col-md-8">
+                                            <div className="media-wrap">
+                                                <div className="media-container">
                                                     <iframe width="560" height="315" loading="lazy" src="https://www.youtube.com/embed/BxGIv_rh-zk?si=lhnq5CCjnDFgs0Yv" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                                                 </div>
                                             </div>

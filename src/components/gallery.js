@@ -6,6 +6,46 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 function Gallery() {
     const images = [
         {
+            src: require('../assets/images/1_Wes_and_John_Bacon_The_Bop_Shop.jpg'),
+            alt: 'Wes and John Bacon The Bop Shop'
+        },
+        {
+            src: require('../assets/images/2_Wes_and_Dan_Liparini_Jazzys_Cabaret.jpg'),
+            alt: 'Wes and Dan Liparini Jazys Cabaret'
+        },
+        {
+            src: require('../assets/images/3_Wes_Grey_Suit_Intense_Pausa.jpg'),
+            alt: 'Wes Grey Suit Intense Pausa'
+        },
+        {
+            src: require('../assets/images/4_Wes_The_Bop_Shop_Grey_Suit.jpg'),
+            alt: 'Wes The Bop Shop Grey Suit'
+        },
+        {
+            src: require('../assets/images/5_Wes_Gryphons_Blue_Suit.jpg'),
+            alt: 'Wes Gryphons Blue Suit'
+        },
+        {
+            src: require('../assets/images/6_Wes_Profile_The_Bop_Shop.jpg'),
+            alt: 'Wes Profile The Bop Shop'
+        },
+        {
+            src: require('../assets/images/7_Jazz_Homecoming_Flyer.jpg'),
+            alt: 'Jazz Homecoming Flyer'
+        },
+        {
+            src: require('../assets/images/8_Wes_Profile_Right_The_Bop_Shop.jpg'),
+            alt: 'Wes Profile Right The Bop Shop'
+        },
+        {
+            src: require('../assets/images/9_Wes_and_Brian_suto_Gryphons.jpg'),
+            alt: 'Wes and Brian suto Gryphons'
+        },
+        {
+            src: require('../assets/images/10_Wes_Pausa_Art_House.jpg'),
+            alt: 'Wes Paua Art House'
+        },
+        {
             src: require('../assets/images/Wes_Tyler_Goldchain_Nehway_At_Level.jpg'),
             alt: 'Wes Tyler Goldchain Nehway At Level'
         },

@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState, state } from 'react';
+import React, { useEffect, useState } from 'react';
 import OwlCarousel from 'react-owl-carousel';  
 import 'owl.carousel/dist/assets/owl.carousel.css';  
 import 'owl.carousel/dist/assets/owl.theme.default.css';  
@@ -9,7 +9,7 @@ function Gallery() {
     const contentful = require('contentful');
     const space_id = process.env.REACT_APP_CONTENTFUL_SPACE;
     const api_token = process.env.REACT_APP_CONTENTFUL_API_TOKEN;
-    
+
     useEffect(() => {
         // client to interact with API
         const client = contentful.createClient({

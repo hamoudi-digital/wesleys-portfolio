@@ -1,212 +1,112 @@
-import React from "react";
+import React, { useRef, useEffect, useState, state } from 'react';
 import OwlCarousel from 'react-owl-carousel';  
 import 'owl.carousel/dist/assets/owl.carousel.css';  
 import 'owl.carousel/dist/assets/owl.theme.default.css';  
+import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 
 function Media() {
 
-    return(
-        <div className='section media' id='media'>
-            <div className='container'>
-                <div className='row'>
-                    <div className='col-12'>
-                        <div className='content'>
-                            <h2>Media</h2>
-                            <br></br>
-                            <OwlCarousel  
-                                items={1}
-                                className="owl-theme media"  
-                                margin={8}
-                                draggable={0}
-                                responsive={
+    const [media, setMedia] = useState(null);
+    const [loaded, setLoaded] = useState(false);
+    const contentful = require('contentful');
+    const space_id = process.env.REACT_APP_CONTENTFUL_SPACE;
+    const api_token = process.env.REACT_APP_CONTENTFUL_API_TOKEN;
+
+    useEffect(() => {
+        // client to interact with API
+        const client = contentful.createClient({
+            space: space_id,
+            accessToken: api_token
+        });
+        let mediaItems = [];
+
+        // Retreive and format media entries from Contentful
+        client.getEntries({
+            content_type: 'media'
+        }).then(function(entries){
+            entries.items.forEach(function(entry) {
+
+                // format entry data and push to array
+                mediaItems.push(
+                    {
+                        title: entry.fields.title,
+                        videoLink: entry.fields.videoLink,
+                        description: documentToHtmlString(entry.fields.description),
+                    }
+                );
+            });
+            mediaItems.reverse();
+            setMedia(mediaItems);
+            setLoaded(true);
+        });
+    }, []);
+
+    function getVideoId(url) {
+        const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+        const match = url.match(regExp);
+    
+        return (match && match[2].length === 11)
+          ? match[2]
+          : null;
+    }
+
+    if (loaded) {
+        console.log(media);
+        return(
+            <div className='section media' id='media'>
+                <div className='container'>
+                    <div className='row'>
+                        <div className='col-12'>
+                            <div className='content'>
+                                <h2>Media</h2>
+                                <br></br>
+                                <OwlCarousel  
+                                    items={1}
+                                    className="owl-theme media"  
+                                    margin={8}
+                                    draggable={0}
+                                    responsive={
+                                        {
+                                            0:{
+                                                nav:false,
+                                                dots:true,
+                                                draggable:true,
+                                            },
+                                            767:{
+                                                nav:true,
+                                                draggable:false,
+                                            },
+                                        }
+                                    } >  
                                     {
-                                        0:{
-                                            nav:false,
-                                            dots:true,
-                                            draggable:true,
-                                        },
-                                        767:{
-                                            nav:true,
-                                            draggable:false,
-                                        },
+                                        media.map(mediaItem => (
+                                            <div className="media-item">
+                                                <div className="row">
+                                                    <div className="col-md-8">
+                                                        <div className="media-wrap">
+                                                            <div className="media-container">
+                                                                <iframe width="560" height="315" src={'https://www.youtube.com/embed/' + getVideoId(mediaItem.videoLink)} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div className="col-md-4">
+                                                        <div className="media-description">
+                                                            <h3>{mediaItem.title}</h3>
+                                                            <div dangerouslySetInnerHTML={{__html: mediaItem.description}} />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                        ))
                                     }
-                                } >  
-                                <div className="media-item">
-                                    <div className="row">
-                                        <div className="col-md-8">
-                                            <div className="media-wrap">
-                                                <div className="media-container">
-                                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/WQCf7kc5eiM?si=iU-eiHlqasClRbCu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-4">
-                                            <div className="media-description">
-                                                <h3>Wes Lewis Quartet — Little Melonae (Live at Bop Shop Records)</h3>
-                                                <p>Personnel:</p>
-                                                <p>Wes Lewis - Tenor Sax</p>
-                                                <p>Derek Lewis - Piano</p>
-                                                <p>Sabu Adeyola - Bass</p>
-                                                <p>John Bacon - Drums</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> 
-                                <div className="media-item">
-                                    <div className="row">
-                                        <div className="col-md-8">
-                                            <div className="media-wrap">
-                                                <div className="media-container">
-                                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/p4MnDHL5HeI?si=1tZL8r4A6j3wy3Zd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-4">
-                                            <div className="media-description">
-                                                <h3>Wes Lewis Quartet — Jazz Homecoming Tour (Live at Pausa Art House)</h3>
-                                                <p>Personnel:</p>
-                                                <p>Wes Lewis - Tenor Sax</p>
-                                                <p>Dave Schiavone - Tenor Sax/Alto Sax/Flute</p>
-                                                <p>Derek Lewis - Piano</p>
-                                                <p>Sabu Adeyola - Bass</p>
-                                                <p>John Bacon - Drums</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> 
-                                <div className="media-item">
-                                    <div className="row">
-                                        <div className="col-md-8">
-                                            <div className="media-wrap">
-                                                <div className="media-container">
-                                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Gp98-kP6Gdo?si=PAR6SoBKTUb6D0rs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-4">
-                                            <div className="media-description">
-                                                <h3>Wes Lewis Quartet — Scrapple From The Apple (Live at Bop Shop Records)</h3>
-                                                <p>Personnel:</p>
-                                                <p>Wes Lewis - Tenor Sax</p>
-                                                <p>Derek Lewis - Piano</p>
-                                                <p>Sabu Adeyola - Bass</p>
-                                                <p>John Bacon - Drums</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> 
-                                <div className="media-item">
-                                    <div className="row">
-                                        <div className="col-md-8">
-                                            <div className="media-wrap">
-                                                <div className="media-container">
-                                                    <iframe width="560" height="315" loading="lazy" src="https://www.youtube.com/embed/BxGIv_rh-zk?si=lhnq5CCjnDFgs0Yv" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-4">
-                                            <div className="media-description">
-                                                <h3>Wes Lewis Quartet — Darn That Dream (Live at RD86 Space)</h3>
-                                                <p>Personnel:</p>
-                                                <p>Wes Lewis - Tenor Sax</p>
-                                                <p>Derek Lewis - Piano</p>
-                                                <p>Christie Echols - Bass</p>
-                                                <p>Tyler Goldchain - Drums</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> 
-                                <div className="media-item">
-                                    <div className="row">
-                                        <div className="col-md-8">
-                                            <div className="media-wrap">
-                                                <div className="media-container">
-                                                    <iframe width="560" height="315" loading="lazy" src="https://www.youtube.com/embed/K5MUx7BwVls?si=xlj3sDd6wpyD9hAR&amp;start=5195" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-4">
-                                            <div className="media-description">
-                                                <h3>Jimmy Gavagan Trio ft. Wes Lewis — Beatrice (Live at RD86 Space)</h3>
-                                                <p>Personnel:</p>
-                                                <p>Wes Lewis - Tenor Sax</p>
-                                                <p>Jimmy Gavagan - Drums</p>
-                                                <p>Christie Echols - Bass</p>
-                                                <p>Andrew Wilcox - Piano</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> 
-                                <div className="media-item">
-                                    <div className="row">
-                                        <div className="col-md-8">
-                                            <div className="media-wrap">
-                                                <div className="media-container">
-                                                    <iframe width="560" height="315" loading="lazy" src="https://www.youtube.com/embed/i6poOFqgP6c?si=3wt3pfZT-LlItL1i" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-4">
-                                            <div className="media-description">
-                                                <h3>The Yale Jazz Ensemble (ft. Wes Lewis) — Moment’s Notice (Live at Sprague Memorial Hall)</h3>
-                                                <p>Personnel:</p>
-                                                <p>Wayne Escoffery - Conductor</p>
-                                                <p>Jarron Long - Drums</p>
-                                                <p>Thara Joseph - Bass</p>
-                                                <p>Aidan Kluger - Piano</p>
-                                                <p>Wes Lewis - Alto Sax (soloist)</p>
-                                                <p>Max Saffer-Meng - Trombone (soloist)</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> 
-                                <div className="media-item">
-                                    <div className="row">
-                                        <div className="col-md-8">
-                                            <div className="media-wrap">
-                                                <div className="media-container">
-                                                    <iframe width="560" height="315" loading="lazy" src="https://www.youtube.com/embed/R6Wiqx7KODk?si=PVF3QSWfOPoJ3CSz" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-4">
-                                            <div className="media-description">
-                                                <h3>Wes Lewis Quartet — St. Thomas (Live at RD86 Space)</h3>
-                                                <p>Personnel:</p>
-                                                <p>Wes Lewis - Tenor Sax</p>
-                                                <p>Derek Lewis - Piano</p>
-                                                <p>Christie Echols - Bass</p>
-                                                <p>Tyler Goldchain - Drums</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> 
-                                <div className="media-item">
-                                    <div className="row">
-                                        <div className="col-md-8">
-                                            <div className="media-wrap">
-                                                <div className="media-container">
-                                                    <iframe width="560" height="315" loading="lazy" src="https://www.youtube.com/embed/7pne35aHzuI?si=Ewy2LNxSt9Tanoxe" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-4">
-                                            <div className="media-description">
-                                                <h3>Wes Lewis & Raj Basak — Silent Night</h3>
-                                                <p>Personnel:</p>
-                                                <p>Wes Lewis - Tenor Sax</p>
-                                                <p>Raj Basak - Keyboard and Production</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> 
-                            </OwlCarousel>  
+                                </OwlCarousel>  
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    );
+        );
+    }
 }
 
 export default Media;

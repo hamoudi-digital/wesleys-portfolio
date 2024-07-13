@@ -15,7 +15,6 @@ function About() {
             accessToken: api_token
         });
 
-        // Retreive and format media entries from Contentful
         client.getEntries({
             content_type: 'siteOptions'
         }).then(function(entries){

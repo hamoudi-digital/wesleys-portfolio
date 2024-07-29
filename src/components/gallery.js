@@ -6,11 +6,13 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 function Gallery() {
     const [gallery, setGallery] = useState(null);
     const [loaded, setLoaded] = useState(false);
+    const [imgWidth, setImgWidth] = useState(false);
     const contentful = require('contentful');
     const space_id = process.env.REACT_APP_CONTENTFUL_SPACE;
     const api_token = process.env.REACT_APP_CONTENTFUL_API_TOKEN;
 
     useEffect(() => {
+
         // client to interact with API
         const client = contentful.createClient({
             space: space_id,
@@ -19,14 +21,15 @@ function Gallery() {
         let galleryImages = [];
         // Retreive and format gallery entries from Contentful
         client.getEntries({
-            content_type: 'gallery'
+            content_type: 'gallery',
+            'order':'-sys.createdAt'
         }).then(function(entries){
             entries.items.forEach(function(entry) {
 
                 // image file
-                let fileUrl = entry.fields.image.fields.file.url;
+                let fileUrl = 'https:' + entry.fields.image.fields.file.url;
                 let title = entry.fields.title;
-
+    
                 // format entry data and push to array
                 galleryImages.push(
                     {
@@ -39,9 +42,14 @@ function Gallery() {
             setGallery(galleryImages);
             setLoaded(true);
         });
+ 
+        window.addEventListener("resize", handleImageWidth);
+        window.addEventListener("load", handleImageWidth);
+        
     }, []);
 
-    function setCarouselHeight() {
+    // adjust the height of the carousel to reflect the tallest image currently displayed
+   const setCarouselHeight = () => {
         let owlStage = document.querySelector('.gallery .owl-stage')
         let activeItems = document.querySelectorAll('.gallery .owl-item.active');
         let height = 0;
@@ -52,6 +60,11 @@ function Gallery() {
         });
         owlStage.style.height = height + 'px';
     }
+
+    // set width value for image file src in gallery
+    const handleImageWidth = () => {
+        setImgWidth(document.querySelector('.owl-carousel.gallery .gallery-item') ? document.querySelector('.owl-carousel.gallery .gallery-item').offsetWidth : false);
+    };
 
     if (loaded) {
         return(
@@ -66,6 +79,8 @@ function Gallery() {
                                     className="owl-theme gallery"  
                                     margin={8}
                                     onTranslated={setCarouselHeight}
+                                    onInitialized={handleImageWidth}
+                                    onResized={handleImageWidth}
                                     responsive={
                                         {
                                             0:{
@@ -82,7 +97,7 @@ function Gallery() {
                                     {
                                         gallery.map(image => (
                                             <div className="gallery-item">
-                                                <img className="img" src={image.src} alt={image.alt}/>
+                                                <img className="img" src={imgWidth ? image.src + '?w=' + imgWidth : image.src} alt={image.alt}/>
                                             </div> 
                                         ))
                                     }

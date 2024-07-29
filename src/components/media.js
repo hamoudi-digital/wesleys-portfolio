@@ -22,7 +22,8 @@ function Media() {
 
         // Retreive and format media entries from Contentful
         client.getEntries({
-            content_type: 'media'
+            content_type: 'media',
+            'order':'-sys.createdAt'
         }).then(function(entries){
             entries.items.forEach(function(entry) {
 
@@ -51,7 +52,6 @@ function Media() {
     }
 
     if (loaded) {
-        console.log(media);
         return(
             <div className='section media' id='media'>
                 <div className='container'>

@@ -305,6 +305,9 @@ a:hover {
   display: flex;
   align-items: center;
 }
+.section.gallery .owl-carousel .owl-nav {
+  z-index: -1;
+}
 .section.gallery .owl-carousel .gallery-item {
   padding: 11px;
 }

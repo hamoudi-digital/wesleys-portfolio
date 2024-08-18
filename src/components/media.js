@@ -23,9 +23,11 @@ function Media() {
         // Retreive and format media entries from Contentful
         client.getEntries({
             content_type: 'media',
-            'order':'-sys.createdAt'
+            order: 'fields.order'
         }).then(function(entries){
             entries.items.forEach(function(entry) {
+
+                console.log(entry);
 
                 // format entry data and push to array
                 mediaItems.push(
@@ -36,7 +38,6 @@ function Media() {
                     }
                 );
             });
-            mediaItems.reverse();
             setMedia(mediaItems);
             setLoaded(true);
         });

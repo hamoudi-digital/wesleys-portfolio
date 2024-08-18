@@ -22,7 +22,7 @@ function Gallery() {
         // Retreive and format gallery entries from Contentful
         client.getEntries({
             content_type: 'gallery',
-            'order':'-sys.createdAt'
+            order: 'fields.order'
         }).then(function(entries){
             entries.items.forEach(function(entry) {
 
@@ -38,7 +38,6 @@ function Gallery() {
                     }
                 );
             });
-            galleryImages.reverse();
             setGallery(galleryImages);
             setLoaded(true);
         });
